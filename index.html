@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gastos</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Gastos</h1>
+        <div class="dropdown-container">
+            <label for="object-dropdown">Selecciona un cuadro:</label>
+            <select id="object-dropdown">
+                <option value="-1">Ninguno</option>
+            </select>
+            <p id="object-details">Selecciona un objeto para ver sus detalles.</p>
+        </div>
+        <div class="form-image-container">
+            <div class="form-container">
+                <h2>Agregar cuadro personalizado</h2>
+                <form id="expense-form">
+                    <label id="altura" for="height">Altura (cm):</label>
+                    <input type="number" id="height" name="height" required>
+
+                    <label id="anchura" for="width">Anchura (cm):</label>
+                    <input type="number" id="width" name="width" required>
+
+                    <label id="tiempo" for="production-time">Tiempo de Producción (min):</label>
+                    <input type="number" id="production-time" name="production-time" required>
+
+                    <label id="precio" for="price">Precio:</label>
+                    <input type="number" id="price" name="price" required>
+
+                    <button type="button" id="calculate-btn">Calcular</button>
+                </form>
+                <div id="result" class="result"></div>
+            </div>
+            <div class="card-container">
+                <div class="card-container">
+                    <div id="tarjetas-container"></div>
+                    <button id="delete-all-btn">Eliminar Todas las Tarjetas</button>
+                </div>
+                
+            </div>
+            <div class="image-container">
+                <img src="./img/alphonse-elric.png" alt="Descripción de la imagen">
+            </div>
+        </div>
+        <div id="exchange-rate-container">
+            <h2>Cotización del Dólar (USD) en Pesos Uruguayos (UYU):</h2>
+            <p id="exchange-rate">Cargando...</p>
+        </div>
+        
+    </div>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
